@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#attempts {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#pi-display {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px;
+    min-height: 60px;
+}
+
+#input {
+    font-size: 24px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.correct {
+    color: black;
+}
+
+.incorrect {
+    color: red;
+} 

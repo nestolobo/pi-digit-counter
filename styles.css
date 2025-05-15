@@ -1,24 +1,102 @@
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.stats-header > div {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#attempts {
+    text-align: left;
+    padding-left: 20px;
+}
+
+#current-streak {
+    text-align: center;
+}
+
+#high-score {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.content {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    flex: 1;
+    padding: 20px;
+    max-width: 100%;
 }
 
-#attempts {
-    font-size: 24px;
+.chunk-selector {
     margin-bottom: 20px;
 }
 
+#chunk-select {
+    font-size: 18px;
+    padding: 8px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#chunk-select:hover {
+    border-color: #999;
+}
+
+#chunk-select:focus {
+    border-color: #666;
+}
+
 #pi-display {
-    font-size: 48px;
+    font-size: 32px;
     text-align: center;
     margin: 20px;
     min-height: 60px;
+    max-width: 90%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.4;
+    font-family: monospace;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 #input {
@@ -26,7 +104,18 @@ body {
     padding: 10px;
     width: 300px;
     text-align: center;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#input.incorrect {
+    background-color: #ffebee;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
 }
 
 .correct {
